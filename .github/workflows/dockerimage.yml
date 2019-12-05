@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag my-image-name:$GITHUB_SHA
-        docker push my-image-name:$GITHUB_SHA
-        docker push my-image-name:latest
+        docker build . --file Dockerfile --tag nagerat/aspnetcoretest:$GITHUB_SHA
+        docker push nagerat/aspnetcoretest:$GITHUB_SHA
+        docker push nagerat/aspnetcoretest:latest
         
