@@ -12,7 +12,7 @@ RUN cd ./Test.AspNetCore2Docker && dotnet restore
 RUN cd ./Test.AspNetCore2Docker && dotnet publish -f netcoreapp3.0 -c Release -o out
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/core/runtime:3.0
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
 WORKDIR /app
 COPY --from=build-env /app/Test.AspNetCore2Docker/out .
 ENV ASPNETCORE_URLS=http://+:5000
