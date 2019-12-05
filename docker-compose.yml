@@ -4,7 +4,5 @@ services:
     container_name: nagertest
     restart: always
     build: .
-    expose:
-      - "80"
     ports:
-      - "5000:80" 
+      - "80:5000"
